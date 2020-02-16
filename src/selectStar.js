@@ -4,7 +4,7 @@ conn.connect((err) => {
   if (err) throw err;
   console.log(`Connection state: ${conn.state}`);
 
-  const sql = 'SELECT * FROM customers';
+  const sql = 'SELECT * FROM customers LIMIT 10';
 
   conn.query(sql, (err2, result, fields) => {
     if (err2) throw err2;
