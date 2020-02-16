@@ -7,5 +7,6 @@ conn.connect((err) => {
   conn.query('CREATE DATABASE nodeDB', (err2, result) => {
     if (err2) throw err2;
     console.log(result);
+    conn.end();
   });
 });
